@@ -69,6 +69,10 @@ module wide_alu
         end
     end // always_ff @ (posedge clk_i, negedge rst_ni)
 
+   logic [7:0] fake_signal;
+
+   assign fake_signal = 8'd128;
+
     always_comb begin
         result_d = result_q;
         case (state_q)
